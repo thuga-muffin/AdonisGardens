@@ -1,0 +1,75 @@
+  	<nav id="main-nav" class="container">
+
+  		<header>
+  			<div class="row">
+
+  				<div class="col-md-6 site-name">
+  					<h3 class="one-half-left" id="site-title">
+              <%= link_to 'Adonis Gardens', root_path, title: "A Hipster Flowershop", rel: "home" %>
+            </h3>
+  				</div>
+
+  				<aside class="col-md-6 header widget-area" role="complementary">
+  					<div class="widget-container social-media">
+  						<ul>
+  							<a href="#" 
+  								data-toggle="tooltip"
+  								data-placement="bottom"
+  								data-trigger="hover"
+  								data-title="Facebook">
+
+  					            <li class="entypo-facebook"></li>
+  				            </a>
+  							<a href="#" 
+  								data-toggle="tooltip"
+  								data-placement="bottom"
+  								data-trigger="hover"
+  								data-title="Twitter">
+
+  					            <li class="entypo-twitter"></li>
+  				            </a>
+  							<a href="#" 
+  								data-toggle="tooltip"
+  								data-placement="bottom"
+  								data-trigger="hover"
+  								data-title="Tumblr">
+
+  					            <li class="entypo-tumblr"></li>
+  				            </a>
+  						</ul>
+  					</div>
+  				</aside>
+  				
+  			</div>	<!-- .row -->
+  		</header>
+
+  		<div class="row">
+  			<div class="col-md-12">
+
+  				<ul class="nav nav-pills nav-justified">
+
+          <div class="link-wrapper">
+              <span class="inner-wrapper wrapper-16">
+                  <a class="link hover-16" href="#">#16 square effect, simultaneous</a>
+              </span>
+          </div>
+
+  					<li role="presentation" class="active fancy-wrapper">
+              <button class="fancy-butt">
+    						<%= link_to "Home", '#' %>
+              </button>
+  					</li>
+  					<li role="presentation">
+  						<%= link_to "Features", '#' %>
+  					</li>
+  					<li role="presentation">
+  						<%= link_to 'About', '#' %>
+  					</li>
+  					<li role="presentation">
+  						<%= link_to 'Contact', '#' %>
+  					</li>
+  				</ul>
+
+  			</div>
+  		</div>
+  	</nav>

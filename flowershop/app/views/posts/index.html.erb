@@ -1,0 +1,102 @@
+<section class="container">
+	<div class="row">
+
+		<article id="content" class="col-md-12">
+				<% @post.each do |post| %>
+				<div id="post-1" class="post post-snippet">
+
+					<div class="post-gallery">
+					
+						<button class="entypo-left-open-big prev " role="button" aria-label="previous"></button>	
+
+						<div class="post-slider">
+
+							<div class="slick-item">
+								<a href="img/flower-1.jpeg" data-lightbox="post-1-img-reel">
+									<%= image_tag("flower-1.jpg") %>
+								</a>
+							</div>
+							<div class="slick-item">
+								<a href="img/flower-2.jpeg" data-lightbox="post-1-img-reel">
+									<%= image_tag('flower-2.jpg') %>
+								</a>
+							</div>
+							<div class="slick-item">
+								<a href="img/flower-3.jpeg" data-lightbox="post-1-img-reel">
+									<%= image_tag('flower-3.jpg') %>
+								</a>
+							</div>
+							<div class="slick-item">
+								<a href="img/flower-4.jpeg" data-lightbox="post-1-img-reel">
+									<%= image_tag('flower-4.jpg') %>
+								</a>
+							</div>
+
+						</div>	<!-- .post-slider -->
+
+						<button class="entypo-right-open-big next" role="button" aria-label="next"></button>
+
+						<div class="post-slider-nav">
+							<div class="slick-item">
+								<%= image_tag("flower-1.jpg") %>
+							</div>
+							<div class="slick-item">
+								<%= image_tag('flower-2.jpg') %>
+							</div>
+							<div class="slick-item">
+								<%= image_tag('flower-3.jpg') %>
+							</div>
+							<div class="slick-item">
+								<%= image_tag('flower-4.jpg') %>
+							</div>
+						</div>	<!-- .post-slider-nav -->
+
+					</div>	<!-- .post-gallery -->
+
+						<div class="post-meta">
+
+							<div class="row">					
+
+								<div class="col-md-12">
+
+									<date class="entry-meta">
+										<p>7 July 2016</p>
+										<p>3:43 PM</p>
+									</date>
+
+
+									<div class="post-comments">
+										<div>
+											<p>8</p>
+										</div>
+									</div>
+
+								</div>
+
+							</div>	<!-- .row -->
+
+							<div>
+								<h2><%= post.title %></h2>
+							</div>
+
+						</div>	<!-- .post-meta -->
+
+						<div class="post-content content-snippet">
+							<div class="row">
+								
+								<div class="col-md-12">
+								<p><%= post.body %></p>
+									<button>
+										<h3><%= link_to "Read More", post %></h3>
+									</button>
+								</div>
+
+							</div>
+						</div>	<!-- post-snippet -->
+
+				</div>	<!-- #post-1 -->
+				<% end %>
+
+		</article>
+	</div>
+</section>
