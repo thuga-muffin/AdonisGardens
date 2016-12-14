@@ -935,11 +935,11 @@ button h3 {
   -ms-transform: scaleY(0);
   -moz-transform: scaleY(0);
   -webkit-transform: scaleY(0);
-  transition: transform 0.3s ease-in;
-  -o-transition: transform 0.3s ease-in;
-  -ms-transition: transform 0.3s ease-in;
-  -moz-transition: transform 0.3s ease-in;
-  -webkit-transition: transform 0.3s ease-in;
+  transition: transform 0.4s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -o-transition: transform 0.4s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -ms-transition: transform 0.4s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -moz-transition: transform 0.4s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -webkit-transition: transform 0.4s cubic-bezier(0.47, 0, 0.75, 0.72);
   transform-origin: bottom left;
 }
 .link-wrapper button.box-butt:after {
@@ -955,11 +955,11 @@ button h3 {
   -ms-transform: scaleY(0);
   -moz-transform: scaleY(0);
   -webkit-transform: scaleY(0);
-  transition: transform 0.3s ease-in;
-  -o-transition: transform 0.3s ease-in;
-  -ms-transition: transform 0.3s ease-in;
-  -moz-transition: transform 0.3s ease-in;
-  -webkit-transition: transform 0.3s ease-in;
+  transition: transform 0.4s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -o-transition: transform 0.4s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -ms-transition: transform 0.4s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -moz-transition: transform 0.4s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -webkit-transition: transform 0.4s cubic-bezier(0.47, 0, 0.75, 0.72);
   transform-origin: top right;
 }
 .link-wrapper button.box-butt:hover:before,
@@ -999,11 +999,11 @@ button h3 {
   -ms-transform: scaleX(0);
   -moz-transform: scaleX(0);
   -webkit-transform: scaleX(0);
-  transition: transform 0.3s ease-in;
-  -o-transition: transform 0.3s ease-in;
-  -ms-transition: transform 0.3s ease-in;
-  -moz-transition: transform 0.3s ease-in;
-  -webkit-transition: transform 0.3s ease-in;
+  transition: transform 0.4s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -o-transition: transform 0.4s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -ms-transition: transform 0.4s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -moz-transition: transform 0.4s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -webkit-transition: transform 0.4s cubic-bezier(0.47, 0, 0.75, 0.72);
   transform-origin: top left;
 }
 .link-wrapper button.box-butt a:after {
@@ -1019,11 +1019,11 @@ button h3 {
   -ms-transform: scaleX(0);
   -moz-transform: scaleX(0);
   -webkit-transform: scaleX(0);
-  transition: transform 0.3s ease-in;
-  -o-transition: transform 0.3s ease-in;
-  -ms-transition: transform 0.3s ease-in;
-  -moz-transition: transform 0.3s ease-in;
-  -webkit-transition: transform 0.3s ease-in;
+  transition: transform 0.4s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -o-transition: transform 0.4s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -ms-transition: transform 0.4s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -moz-transition: transform 0.4s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -webkit-transition: transform 0.4s cubic-bezier(0.47, 0, 0.75, 0.72);
   transform-origin: bottom right;
 }
 /*************************************/

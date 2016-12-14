@@ -116,7 +116,7 @@ button h3	{
 
 
 @line-thickness: 2px;
-@line-timing: .3s;
+@line-timing: .4s;
 
 .link-wrapper	{
 	padding: 20px 0;
@@ -144,7 +144,7 @@ button h3	{
 			bottom: 0;
 
 			.transform(@property: scaleY(0));
-			.trans(@property: transform, @dur: @line-timing);
+			.trans(@property: transform, @dur: @line-timing, @ease: @in-sine);
 			transform-origin: bottom left;
 		}
 
@@ -160,7 +160,7 @@ button h3	{
 			right: 0;
 
 			.transform(@property: scaleY(0));
-			.trans(@property: transform, @dur: @line-timing);
+			.trans(@property: transform, @dur: @line-timing, @ease: @in-sine);
 			transform-origin: top right;
 		}
 
@@ -197,7 +197,7 @@ button h3	{
 				left: 0;
 
 				.transform(scaleX(0));
-				.trans(@property: transform, @dur: @line-timing);
+				.trans(@property: transform, @dur: @line-timing, @ease: @in-sine);
 				transform-origin: top left;
 			}
 
@@ -213,7 +213,7 @@ button h3	{
 				right: 0;
 
 				.transform(scaleX(0));
-				.trans(@property: transform, @dur: @line-timing);
+				.trans(@property: transform, @dur: @line-timing, @ease: @in-sine);
 				transform-origin: bottom right;
 			}
 		}
