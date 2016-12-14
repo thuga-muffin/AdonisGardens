@@ -48,6 +48,8 @@ p	{
 @gray-lighter: lighten(#000, 93.5%); // #eee
 @darkest:	   #000;
 
+@site-black: #333;
+
 @font-color: #333;
 @link-color: ;
 
@@ -89,31 +91,52 @@ a, button	{
 	outline: 0;
 }
 
-button	{
+a	{
+	font-family: @sans-serif;
 
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+
+	letter-spacing: 1px;
+	color: @font-color;
+}
+
+button	{
+	border: 0;
+
+	background-color: transparent;
 }
 
 button h3	{
 	margin: 0;
 }
 
-.fancy-wrapper	{
+/*----------  box - link  ----------*/
+
+
+@line-thickness: 2px;
+@line-timing: .3s;
+
+.link-wrapper	{
 	padding: 20px 0;
 
 	display: block;
 	position: relative;
 
-	button.fancy-butt	{
+	button.box-butt	{
 		display: inline-block;
 		position: relative;
 
-		padding: 10px;
+		padding: 0px;
+
+		width: 80%;
 
 		&:before	{
 			content: '';
 			background-color: #333;
 
-			width: 3px;
+			width: @line-thickness;
 			height: 100%;
 
 			position: absolute;
@@ -121,7 +144,7 @@ button h3	{
 			bottom: 0;
 
 			.transform(@property: scaleY(0));
-			.trans(@property: transform);
+			.trans(@property: transform, @dur: @line-timing);
 			transform-origin: bottom left;
 		}
 
@@ -129,7 +152,7 @@ button h3	{
 			content: '';
 			background-color: #333;
 
-			width: 3px;
+			width: @line-thickness;
 			height: 100%;
 
 			position: absolute;
@@ -137,7 +160,7 @@ button h3	{
 			right: 0;
 
 			.transform(@property: scaleY(0));
-			.trans(@property: transform);
+			.trans(@property: transform, @dur: @line-timing);
 			transform-origin: top right;
 		}
 
@@ -153,8 +176,12 @@ button h3	{
 
 		a	{
 			text-decoration: none;
+			text-align: center;
 
 			padding: 10px 0;
+
+			width: 100%;
+
 			display: inline-block;
 			position: relative;
 
@@ -163,14 +190,14 @@ button h3	{
 				background-color: #333;
 
 				width: 100%;
-				height: 3px;
+				height: @line-thickness;
 
 				position: absolute;
 				top: 0;
 				left: 0;
 
 				.transform(scaleX(0));
-				.trans(@property: transform);
+				.trans(@property: transform, @dur: @line-timing);
 				transform-origin: top left;
 			}
 
@@ -179,14 +206,14 @@ button h3	{
 				background-color: #333;
 
 				width: 100%;
-				height: 3px;
+				height: @line-thickness;
 
 				position: absolute;
 				bottom: 0;
 				right: 0;
 
 				.transform(scaleX(0));
-				.trans(transform);
+				.trans(@property: transform, @dur: @line-timing);
 				transform-origin: bottom right;
 			}
 		}
@@ -292,13 +319,15 @@ nav#main-nav	{
 		}
 
 	header	{
-		h3	{
-			font-family: @serif;
 
+		border-bottom: 1px @site-black solid;
+
+		h3	{
 			text-transform: uppercase;
 			letter-spacing: 1px;
 
 			a	{
+				font-family: @serif;
 				color: #333;
 			}
 		}
@@ -316,62 +345,39 @@ nav#main-nav	{
 	}
 
 	ul.nav	{
-		border: 1px solid @darkest;
-		border-left: none;
-		border-right: none;
-		border-bottom: none;
-
-		margin: 0 0 5px;
-
 
 		li	{
-			font-family: 'Source Sans Pro', sans-serif;
 
-			text-transform: uppercase;
-			text-align: left;
-			letter-spacing: 1px;
 
-			a	{
-				color: #333;
 
-				text-align: left;
-
-				border-radius: 0;
-
-				padding: 10px 0;
-			}
-
-				a:hover	{
-					background-color: transparent;
-				}
 
 				a:after	{
-					content: '';
+					// content: '';
 
-					background-color: @darkest;
+					// background-color: @darkest;
 
-					width: 0;
-					height: 2px;
+					// width: 0;
+					// height: 2px;
 
-					position: absolute;
-					bottom: 0;
-					left: 0;
+					// position: absolute;
+					// bottom: 0;
+					// left: 0;
 
-					.trans( @property: width, 
-							@dur: .1s, 
-							@ease: @in-sine )
+					// .trans( @property: width, 
+					// 		@dur: .1s, 
+					// 		@ease: @in-sine )
 				}
 
 					a:hover:after	{
-						width: 80%;
+						// width: 80%;
 
-						.trans( @property: width, 
-								@ease: @in-sine )
+						// .trans( @property: width, 
+						// 		@ease: @in-sine )
 					}
 
 			&.active a	{
-				background-color: transparent;
-				color: initial;
+				// background-color: transparent;
+				// color: initial;
 			}
 		}	/* li */
 		
@@ -379,14 +385,14 @@ nav#main-nav	{
 	
 
 	&.stuck	{
-		background: #fff;
+		// background: #fff;
 
-		width: 100%;
+		// width: 100%;
 
-		padding: 0 30px;
+		// padding: 0 30px;
 
-		position: fixed;
-		top: 0;
+		// position: fixed;
+		// top: 0;
 
 		// ul.nav	{
 		// 	li	{
