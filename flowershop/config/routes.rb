@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
+
   get 'pages/home'
 
   get 'pages/about'
@@ -11,6 +13,8 @@ Rails.application.routes.draw do
 
   # get 'posts/index'
   resources :posts
+
+  resources :articles
 
   root 'pages#home'
 
