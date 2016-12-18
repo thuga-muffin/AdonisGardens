@@ -128,7 +128,7 @@ input[type = textarea]	{
 
 
 @line-thickness: 2px;
-@line-timing: .4s;
+@line-timing: .3s;
 
 .link-wrapper	{
 	padding: 20px 0;
@@ -156,7 +156,7 @@ input[type = textarea]	{
 			bottom: 0;
 
 			.transform(@property: scaleY(0));
-			.trans(@property: transform, @dur: @line-timing, @ease: @in-sine);
+			.trans(@property: transform, @dur: @line-timing);
 			transform-origin: bottom left;
 		}
 
@@ -172,7 +172,7 @@ input[type = textarea]	{
 			right: 0;
 
 			.transform(@property: scaleY(0));
-			.trans(@property: transform, @dur: @line-timing, @ease: @in-sine);
+			.trans(@property: transform, @dur: @line-timing);
 			transform-origin: top right;
 		}
 
@@ -209,7 +209,7 @@ input[type = textarea]	{
 				left: 0;
 
 				.transform(scaleX(0));
-				.trans(@property: transform, @dur: @line-timing, @ease: @in-sine);
+				.trans(@property: transform, @dur: @line-timing);
 				transform-origin: top left;
 			}
 
@@ -225,7 +225,7 @@ input[type = textarea]	{
 				right: 0;
 
 				.transform(scaleX(0));
-				.trans(@property: transform, @dur: @line-timing, @ease: @in-sine);
+				.trans(@property: transform, @dur: @line-timing);
 				transform-origin: bottom right;
 			}
 		}
