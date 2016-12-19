@@ -957,6 +957,7 @@ body button h3 {
 }
 body input[type=text] {
   font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing: 1px;
   border: none;
   border-bottom: 2px solid #333;
   width: 80%;
@@ -969,6 +970,7 @@ body input[type=file] {
 body label[for=post_image] {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1em;
+  text-transform: uppercase;
   border: 1px #333 solid;
   padding: 5px 35px;
   cursor: pointer;
@@ -1046,6 +1048,7 @@ body .link-wrapper button.box-butt:after {
   width: 2px;
   height: 100%;
   position: absolute;
+  top: 0;
   right: 0;
   transform: scaleY(0);
   -o-transform: scaleY(0);
