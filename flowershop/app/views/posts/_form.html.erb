@@ -2,7 +2,7 @@
 <%= form_for @post, :html => {:multipart => true} do |f| %>
 	<% if @post.errors.any? %>
 	    <div id="error_explanation">
-	      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+	      <h4 class="error"><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h4>
 	 
 	      <ul>
 	      <% @post.errors.full_messages.each do |message| %>
@@ -15,9 +15,9 @@
 	<%= f.text_field :title, placeholder: "Placeholder Text" %><br>
 	<br>
 	<%= f.label :body %><br>
-	<%= f.text_area :body %>
+	<%= f.text_area :body, placeholder: "Body goes here" %>
 	<br>
 	<%= f.label :image %><br>
-	<%=f.file_field :image %>
-	<button><%= f.submit %></button>	
+	<%=f.file_field :image %><br>
+	<%= f.submit %>
 <% end %>

@@ -11,6 +11,31 @@
 @import url('https://fonts.googleapis.com/css?family=Abhaya+Libre');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700');
 
+@font-face	{
+	font-family: @sans-serif;
+	font-weight: 300;
+	src: url('../fonts/PT_Sans-Web-Regular.ttf');
+}
+
+@font-face	{
+	font-family: @sans-serif;
+	font-weight: 4000;
+	src: url('../fonts/PT_Sans-Web-Regular.ttf');
+}
+
+@font-face	{
+	font-family: @sans-serif;
+	font-weight: 600;
+	src: url('../fonts/PT_Sans-Web-Regular.ttf');
+}
+
+@font-face	{
+	font-family: @sans-serif;
+	font-weight: 700;
+	src: url('../fonts/PT_Sans-Web-Regular.ttf');
+}
+
+
 /* entypo */
 [class*="entypo-"]:before {
   font-family: 'entypo', sans-serif;
@@ -21,12 +46,44 @@
 =            T Y P O G R A P H Y            =
 ===========================================*/
 
-h1	{
-	font-family: @serif;
-}
+main {
 
-p	{
-	font-family: 'Source Sans Pro', sans-serif;
+	h1	{
+		font-family: @serif;
+	}
+
+	h3	{
+		font-family: @sans-serif;
+		font-weight: 300;
+		font-size: 1.5em;
+
+		letter-spacing: 2px;
+		text-transform: uppercase;
+	}
+
+	h4	{
+		font-family: @sans-serif;
+	}
+
+	h4.error	{
+		color: crimson;
+	}
+
+	p	{
+		font-family: 'Source Sans Pro', sans-serif;
+	}
+
+
+	label	{
+		font-family: @sans-serif;
+		font-weight: 400;
+		font-size: 1.5em;
+		color: @site-black;
+
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
+
 }
 
 
@@ -81,154 +138,219 @@ p	{
 =======================================*/
 
 *	{
-	outline: 0;
-}
-
-a:hover	{
-	text-decoration: none;
-	cursor: pointer;
-}
-
-a, button	{
-	outline: 0;
-}
-
-a	{
-	font-family: @sans-serif;
-
-	text-transform: uppercase;
-	text-decoration: none;
-	text-align: center;
-
-	letter-spacing: 1px;
-	color: @font-color;
-}
-
-button	{
-	border: 0;
-
-	background-color: transparent;
-}
-
-button h3	{
-	margin: 0;
-}
-
-input[type = text ],
-input[type = textarea]	{
-	border: none;
-	border-bottom: 2px solid @site-black;
-
-	width: 80%;
-
-	padding: 10px 0;
-}
-
-/*----------  box - link  ----------*/
+		outline: 0;
+	}
 
 
-@line-thickness: 2px;
-@line-timing: .3s;
+body	{
 
-.link-wrapper	{
-	padding: 20px 0;
+	
+	a:hover	{
+		text-decoration: none;
+		cursor: pointer;
+	}
 
-	display: block;
-	position: relative;
+	a, button	{
+		outline: 0;
+	}
 
-	button.box-butt	{
-		display: inline-block;
-		position: relative;
+	a	{
+		font-family: @sans-serif;
 
-		padding: 0px;
+		text-transform: uppercase;
+		text-decoration: none;
+		text-align: center;
+
+		letter-spacing: 1px;
+		color: @font-color;
+	}
+
+	button	{
+		font-family: @sans-serif;
+		border: 1px @site-black solid;
+
+		background-color: transparent;
+	}
+
+	button h3	{
+		margin: 0;
+	}
+
+	input[type = text ]	{
+		font-family: @sans-serif;
+
+
+		border: none;
+		border-bottom: 2px solid @site-black;
 
 		width: 80%;
 
-		&:before	{
-			content: '';
-			background-color: #333;
+		padding: 10px 0;
+		margin: 0 0 20px;
+	}
 
-			width: @line-thickness;
-			height: 100%;
+	input[type = file]	{
+		display: none;
+	}
 
-			position: absolute;
-			left: 0;
-			bottom: 0;
+	label[for = post_image]	{
+		font-family: @sans-serif;
+		font-size: 1em;
 
-			.transform(@property: scaleY(0));
-			.trans(@property: transform, @dur: @line-timing);
-			transform-origin: bottom left;
+		
+
+		border: 1px @site-black solid;
+
+		padding: 5px 35px;
+
+		cursor: pointer;
+
+		&:hover	{
+			background: @site-black;
+			color: #fff;
+			.trans(@property: all)
 		}
+	}
 
-		&:after	{
-			content: '';
-			background-color: #333;
+	input[type = submit]	{
+		font-family: @sans-serif;
+		font-size: 1em;
+		background: transparent;
+		border: 1px @site-black solid;
 
-			width: @line-thickness;
-			height: 100%;
+		text-transform: uppercase;
+		letter-spacing: 1px;
 
-			position: absolute;
-			top: 0;
-			right: 0;
+		padding: 5px 35px;
 
-			.transform(@property: scaleY(0));
-			.trans(@property: transform, @dur: @line-timing);
-			transform-origin: top right;
+		&:hover	{
+			background: @site-black;
+			color: #fff;
+			.trans(@property: all)
 		}
+	}
 
-		&:hover:before,
-		&:hover:after	{
-			.transform(@property: scaleY(1));
-		}
+	textarea	{
+		font-family: @sans-serif;
 
-		&:hover a:before,
-		&:hover a:after	{
-			.transform(scaleX(1))
-		}
+		letter-spacing: 1px;
 
-		a	{
-			text-decoration: none;
-			text-align: center;
+		border: none;
+		border-bottom: 2px solid @site-black;
+		
+		width: 80%;
+		height: 300px;
 
-			padding: 10px 0;
+		margin: 0 0 20px;
+	}
 
-			width: 100%;
+	/*----------  box - link  ----------*/
 
+
+	@line-thickness: 2px;
+	@line-timing: .4s;
+
+	.link-wrapper	{
+		padding: 20px 0;
+
+		display: block;
+		position: relative;
+
+		button.box-butt	{
 			display: inline-block;
 			position: relative;
+
+			padding: 0px;
+
+			width: 80%;
 
 			&:before	{
 				content: '';
 				background-color: #333;
 
-				width: 100%;
-				height: @line-thickness;
+				width: @line-thickness;
+				height: 100%;
 
 				position: absolute;
-				top: 0;
 				left: 0;
+				bottom: 0;
 
-				.transform(scaleX(0));
-				.trans(@property: transform, @dur: @line-timing);
-				transform-origin: top left;
+				.transform(@property: scaleY(0));
+				.trans(@property: transform, @dur: @line-timing, @ease: @in-sine);
+				transform-origin: bottom left;
 			}
 
 			&:after	{
 				content: '';
 				background-color: #333;
 
-				width: 100%;
-				height: @line-thickness;
+				width: @line-thickness;
+				height: 100%;
 
 				position: absolute;
-				bottom: 0;
+
 				right: 0;
 
-				.transform(scaleX(0));
-				.trans(@property: transform, @dur: @line-timing);
-				transform-origin: bottom right;
+				.transform(@property: scaleY(0));
+				.trans(@property: transform, @dur: @line-timing, @ease: @in-sine);
+				transform-origin: top right;
+			}
+
+			&:hover:before,
+			&:hover:after	{
+				.transform(@property: scaleY(1));
+			}
+
+			&:hover a:before,
+			&:hover a:after	{
+				.transform(scaleX(1))
+			}
+
+			a	{
+				text-decoration: none;
+				text-align: center;
+
+				padding: 10px 0;
+
+				width: 100%;
+
+				display: inline-block;
+				position: relative;
+
+				&:before	{
+					content: '';
+					background-color: #333;
+
+					width: 100%;
+					height: @line-thickness;
+
+					position: absolute;
+					top: 0;
+					left: 0;
+
+					.transform(scaleX(0));
+					.trans(@property: transform, @dur: @line-timing, @ease: @in-sine);
+					transform-origin: top left;
+				}
+
+				&:after	{
+					content: '';
+					background-color: #333;
+
+					width: 100%;
+					height: @line-thickness;
+
+					position: absolute;
+					bottom: 0;
+					right: 0;
+
+					.transform(scaleX(0));
+					.trans(@property: transform, @dur: @line-timing, @ease: @in-sine);
+					transform-origin: bottom right;
+				}
 			}
 		}
+
 	}
 
 }
@@ -334,15 +456,11 @@ nav#main-nav	{
 
 		border-bottom: 1px @site-black solid;
 
-		h3	{
-			text-transform: uppercase;
-			letter-spacing: 1px;
 
 			a	{
 				font-family: @serif;
 				color: #333;
 			}
-		}
 
 		.social-media	{
 
@@ -360,7 +478,13 @@ nav#main-nav	{
 
 		li	{
 
+				button	{
+					border: none;
+				}
 
+				a	{
+					color: @site-black;
+				}
 
 
 				a:after	{
@@ -515,6 +639,11 @@ nav#main-nav	{
 .post-content	{
 	padding: 0 30px;
 }
+
+/*----------  f o r m  ----------*/
+
+
+
 
 
 /*************************************/

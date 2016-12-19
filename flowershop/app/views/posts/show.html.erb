@@ -2,10 +2,24 @@
 	<div class="row">
 
 		<article id="content" class="col-md-12">
+			<p id="notice"><%= notice %></p>
+
+			<p>
+				<%= image_tag @post.image_url %>
+			</p>
+
+			<p><%= @post.created_at.strftime("%d %b. %Y") %></p>
 
 			<h1><%= @post.title %></h1>
 
 			<div><%= @post.body %></div>
+
+			<button>
+				<%= link_to "edit post", edit_post_path(@post) %>
+			</button>
+			<button>
+				<%= link_to 'delete post', post_path(@post), method: :delete, data: {confirm: "Are you sure?"} %>
+			</button>
 
 		</article>
 	</div>

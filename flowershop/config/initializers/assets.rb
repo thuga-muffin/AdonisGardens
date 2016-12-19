@@ -9,13 +9,14 @@ Rails.application.config.assets.version = '1.0'
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
+Rails.application.config.assets.precompile += %w( bootstrap.css )
+Rails.application.config.assets.precompile += %w( styles.css )
+Rails.application.config.assets.precompile += %w( slick.css )
+Rails.application.config.assets.precompile += %w( lightbox.css )
+
 Rails.application.config.assets.precompile += %w( jquery-3.1.1.js )
 Rails.application.config.assets.precompile += %w( script )
 Rails.application.config.assets.precompile += %w( bootstrap )
 Rails.application.config.assets.precompile += %w( lightbox )
 Rails.application.config.assets.precompile += %w( slick )
 
-Rails.application.config.assets.precompile += %w( styles.css )
-Rails.application.config.assets.precompile += %w( bootstrap.css )
-Rails.application.config.assets.precompile += %w( slick.css )
-Rails.application.config.assets.precompile += %w( lightbox.css )
