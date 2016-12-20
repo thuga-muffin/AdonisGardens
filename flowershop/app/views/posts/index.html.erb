@@ -3,9 +3,13 @@
 
 		<article id="content" class="col-md-12">
 				<% @post.each do |post| %>
-				<div id="post-1" class="post post-snippet">
+				<div class="post post-snippet">
 
-					<div class="post-gallery">
+					<div class="post-img">
+						<%= image_tag(post.image) %>
+					</div>
+
+					<!-- <div class="post-gallery">
 					
 						<button class="entypo-left-open-big prev " role="button" aria-label="previous"></button>	
 
@@ -32,9 +36,9 @@
 								</a>
 							</div>
 
-						</div>	<!-- .post-slider -->
+						</div> -->	<!-- .post-slider -->
 
-						<button class="entypo-right-open-big next" role="button" aria-label="next"></button>
+						<!-- <button class="entypo-right-open-big next" role="button" aria-label="next"></button>
 
 						<div class="post-slider-nav">
 							<div class="slick-item">
@@ -49,9 +53,9 @@
 							<div class="slick-item">
 								<%= image_tag('flower-4.jpg') %>
 							</div>
-						</div>	<!-- .post-slider-nav -->
+						</div> -->	<!-- .post-slider-nav -->
 
-					</div>	<!-- .post-gallery -->
+					<!-- </div> -->	<!-- .post-gallery -->
 
 						<div class="post-meta">
 
@@ -60,10 +64,9 @@
 								<div class="col-md-12">
 
 									<date class="entry-meta">
-										<p>7 July 2016</p>
+										<p><%= post.created_at.strftime("%d %b. %Y") %></p>
 										<p>3:43 PM</p>
 									</date>
-
 
 									<div class="post-comments">
 										<div>
@@ -74,6 +77,8 @@
 								</div>
 
 							</div>	<!-- .row -->
+
+							<hr>
 
 							<div>
 								<h2><%= post.title %></h2>
@@ -86,7 +91,7 @@
 								
 								<div class="col-md-12">
 								<p><%= post.body %></p>
-									<button>
+									<button class="black-butt">
 										<h3><%= link_to "Read More", post %></h3>
 									</button>
 								</div>

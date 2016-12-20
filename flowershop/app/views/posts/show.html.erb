@@ -14,10 +14,10 @@
 
 			<div><%= @post.body %></div>
 
-			<button>
+			<button class="black-butt">
 				<%= link_to "edit post", edit_post_path(@post) %>
 			</button>
-			<button>
+			<button class="black-butt">
 				<%= link_to 'delete post', post_path(@post), method: :delete, data: {confirm: "Are you sure?"} %>
 			</button>
 

@@ -172,6 +172,29 @@ body	{
 		background-color: transparent;
 	}
 
+	button.black-butt	{
+		font-family: @sans-serif;
+		font-size: 1em;
+		background: transparent;
+		border: 1px @site-black solid;
+
+		text-transform: uppercase;
+		letter-spacing: 1px;
+
+		padding: 5px 35px;
+
+		&:hover	{
+			background: @site-black;
+			color: #fff;
+			.trans(@property: all)
+		}
+
+		&:hover a	{
+			color: #fff;
+		}
+
+	}
+
 	button h3	{
 		margin: 0;
 	}
@@ -613,6 +636,13 @@ nav#main-nav	{
 ================================*/
 
 .post	{
+
+	.post-img	{
+
+		img	{
+			width: 100%;
+		}
+	}
 	.post-meta	{
 		date	{
 			float: left;
@@ -638,7 +668,7 @@ nav#main-nav	{
 
 .post-meta,
 .post-content	{
-	padding: 0 30px;
+	padding: 0 0;
 }
 
 /*----------  f o r m  ----------*/
@@ -677,7 +707,7 @@ nav#main-nav	{
 }
 
 article#content	{
-	padding: 50px;
+	padding: 50px 100px;
 }
 
 
