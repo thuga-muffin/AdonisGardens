@@ -4,9 +4,11 @@
 		<article id="content" class="col-md-12">
 			<p id="notice"><%= notice %></p>
 
+			<%= @post.images.each do |image| %>
 			<p>
-				<%= image_tag @post.image_url %>
+				<%= image_tag images_url %>
 			</p>
+			<% end %>
 
 			<p><%= @post.created_at.strftime("%d %b. %Y") %></p>
 

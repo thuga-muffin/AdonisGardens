@@ -1,6 +1,6 @@
 class Post < ApplicationRecord
-	attr_accessor :image
-	mount_uploader :image, ImageUploader
+	attr_accessor :images
+	mount_uploader :images, ImageUploader
 
 	uploader = ImageUploader.new
 

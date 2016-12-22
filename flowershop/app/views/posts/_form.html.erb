@@ -18,6 +18,6 @@
 	<%= f.text_area :body, placeholder: "Body goes here" %>
 	<br>
 	<%= f.label :image %><br>
-	<%=f.file_field :image %><br>
+	<%=f.file_field :images, multiple: true %><br>
 	<%= f.submit %>
 <% end %>
