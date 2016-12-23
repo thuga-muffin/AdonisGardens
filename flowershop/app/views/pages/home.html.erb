@@ -48,7 +48,7 @@
 
 						<div class="post-gallery">
 
-							<%= image_tag post.image %>
+							<%= image_tag post.image, class: "post-img" %>
 						
 							<!-- <button class="entypo-left-open-big prev " role="button" aria-label="previous"></button>	 -->
 
@@ -103,8 +103,8 @@
 								<div class="col-md-12">
 
 									<date class="entry-meta">
-										<p>7 July 2016</p>
-										<p>3:43 PM</p>
+										<p><%= post.created_at.strftime("%d %B %Y") %></p>
+										<p><%= post.created_at.strftime("%l : %M") %></p>
 									</date>
 
 
