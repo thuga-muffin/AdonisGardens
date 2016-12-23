@@ -1287,7 +1287,7 @@ nav#main-nav ul.nav li a {
 /*================================
 =            P O S T             =
 ================================*/
-.post .post-img img {
+.post img.post-img {
   width: 100%;
 }
 .post .post-meta date {
@@ -1328,5 +1328,5 @@ nav#main-nav ul.nav li a {
   margin: 0 auto;
 }
 article#content {
-  padding: 50px 100px;
+  padding: 50px;
 }
