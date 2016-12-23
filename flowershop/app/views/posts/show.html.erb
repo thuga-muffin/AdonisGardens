@@ -12,7 +12,7 @@
 
 			<h1><%= @post.title %></h1>
 
-			<div><%= @post.body %></div>
+			<div><%= simple_format @post.body %></div>
 
 			<button class="black-butt">
 				<%= link_to "edit post", edit_post_path(@post) %>
