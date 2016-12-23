@@ -1,6 +1,7 @@
 class PostImage < ApplicationRecord
-	attr_accessor :images
-	mount_uploader :images, ImageUploader
+	attr_accessor :image
+	mount_uploader :image, ImageUploader
 
 	belongs_to :post
 end
+

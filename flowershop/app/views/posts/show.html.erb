@@ -4,9 +4,9 @@
 		<article id="content" class="col-md-12">
 			<p id="notice"><%= notice %></p>
 
-			<%= @post.images.each do |image| %>
+			<%= @post.post_images.each do |post_image| %>
 			<p>
-				<%= image_tag images_url %>
+				<%= image_tag(post_image.object) %>
 			</p>
 			<% end %>
 

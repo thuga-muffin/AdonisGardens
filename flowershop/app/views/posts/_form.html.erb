@@ -18,6 +18,13 @@
 	<%= f.text_area :body, placeholder: "Body goes here" %>
 	<br>
 	<%= f.label :image %><br>
-	<%=f.file_field :images, multiple: true %><br>
+	<%=f.file_field :post_images do |post_image| %>
+		<% if post_image.object.new_record? %>
+			<%= post_image.file_field :image %>
+		<% else %>
+			<%= image_tag(post_image.object.image.url(:image)) %>
+			<%= post_image.check_box :_destroy %>
+		<% end %>
+	<% end %>
 	<%= f.submit %>
 <% end %>
