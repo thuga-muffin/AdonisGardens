@@ -4,11 +4,13 @@
 		<article id="content" class="col-md-12">
 			<p id="notice"><%= notice %></p>
 
-			<%= @post.post_images.each do |post_image| %>
+			<%= @post.post_attachments.each do |p| %>
 			<p>
-				<%= image_tag(post_image.object) %>
-			</p>
+				<%= image_tag p.mult_image_url %>
+				<%= link_to "Edit Image", edit_post_attachment_path(p) %>
 			<% end %>
+			</p>
+			
 
 			<p><%= @post.created_at.strftime("%d %b. %Y") %></p>
 
