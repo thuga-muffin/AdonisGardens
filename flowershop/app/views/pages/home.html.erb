@@ -1,14 +1,14 @@
 
 
 <section class="container hero-home">
-		<div class="row">
+	<div class="row">
 
-			<div class="col-md-12">
-				
-			</div>
-
+		<div class="col-md-12">
+			
 		</div>
-	</section>
+
+	</div>
+</section>
 
 	<section class="container feat-home">
 		<div class="row">
@@ -43,13 +43,16 @@
 				</div>
 				<div class="entry-meta"></div> -->
 
+				<% @post.each do |post| %>
 				<div id="post-1" class="post post-snippet">
 
 						<div class="post-gallery">
-						
-							<button class="entypo-left-open-big prev " role="button" aria-label="previous"></button>	
 
-							<div class="post-slider">
+							<%= image_tag post.image, class: "post-img" %>
+						
+							<!-- <button class="entypo-left-open-big prev " role="button" aria-label="previous"></button>	 -->
+
+							<!-- <div class="post-slider">
 
 								<div class="slick-item">
 									<a href="images/flower-1.jpeg" data-lightbox="post-1-img-reel">
@@ -72,11 +75,11 @@
 									</a>
 								</div>
 
-							</div>	<!-- .post-slider -->
+							</div> -->	<!-- .post-slider -->
 
-							<button class="entypo-right-open-big next" role="button" aria-label="next"></button>
+							<!-- <button class="entypo-right-open-big next" role="button" aria-label="next"></button> -->
 
-							<div class="post-slider-nav">
+							<!-- <div class="post-slider-nav">
 								<div class="slick-item">
 									<img src="img/flower-1.jpeg">
 								</div>
@@ -89,7 +92,7 @@
 								<div class="slick-item">
 									<img src="img/flower-4.jpeg">
 								</div>
-							</div>	<!-- .post-slider-nav -->
+							</div> -->	<!-- .post-slider-nav -->
 
 						</div>	<!-- .post-gallery -->
 
@@ -100,8 +103,8 @@
 								<div class="col-md-12">
 
 									<date class="entry-meta">
-										<p>7 July 2016</p>
-										<p>3:43 PM</p>
+										<p><%= post.created_at.strftime("%d %B %Y") %></p>
+										<p><%= post.created_at.strftime("%l : %M") %></p>
 									</date>
 
 
@@ -116,7 +119,7 @@
 							</div>	<!-- .row -->
 
 							<div>
-								<h2>Ex nonumes omittam</h2>
+								<h2><%= post.title %></h2>
 							</div>
 
 						</div>	<!-- .post-meta -->
@@ -125,10 +128,11 @@
 							<div class="row">
 								
 								<div class="col-md-12">
-									<p>Everti similique ut pro, nec ad oblique fabellas. An feugait verterem eos, sed cu ceteros fierent. Dicit accusamus deterruisset sea ea, docendi repudiandae voluptatibus has eu, at eam veri vitae abhorreant. Omnis bonorum duo at, reque menandri inciderint at pro.</p>
-									<p>Ex nonumes omittam usu, vel eu vocent oporteat petentium. Dolor appetere imperdiet sea at, aliquam definitiones concludaturque nam no. Vix an fugit iracundia. Solet tempor prodesset mei te, veri complectitur interpretaris no eum.</p>
+									<div>
+										<%= post.body %>
+									</div>
 									<button>
-										<h3>Read More</h3>
+										<h3><%= link_to "Read More", post %></h3>
 									</button>
 								</div>
 
@@ -136,23 +140,11 @@
 						</div>	<!-- post-snippet -->
 
 				</div>	<!-- #post-1 -->
-
+				<% end %>
 
 			</article>   <!-- div#content -->
 
-			<aside class="sidebar widget-area col-md-3" role="complementary">
-
-				<div class="widget-container">
-					<h3 class="widget-title">A sidebar widget</h3>
-					<p>This is a sidebar widget - in your WordPress theme you can set these up to display across your site.</p>
-				</div>	<!-- .widget-container -->
-
-				<div class="widget-container">
-					<h3 class="widget-title">A sidebar widget</h3>
-					<p>This is a sidebar widget - in your WordPress theme you can set these up to display across your site.</p>
-				</div>	<!-- .widget-container -->
-
-			</aside> 
+			<%= render '/layouts/sidebar' %> 
 
 		</div>	<!-- .row -->
 	</section> 	<!-- .container -->
